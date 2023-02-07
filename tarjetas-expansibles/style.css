@@ -1,0 +1,93 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* Cuerpo */
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: #000000;
+}
+
+
+/* Container */
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+
+/* Item */
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 28px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+@media (max-width: 991px) {
+    body {
+        min-height: 110vh;
+        height: auto;
+        max-height: auto;
+    }
+
+    .container {
+        width: 95vw;
+        min-height: 100vh;
+        max-height: auto;
+        flex-direction: column;
+        padding: 1rem auto;
+    }
+
+    .panel {
+        height: 100vh;
+        width: 95%;
+        border-radius: 30px;
+        flex: 1;
+        margin: 10px auto;
+    }
+
+    .panel.active {
+        flex: 5;
+    }
+
+}
